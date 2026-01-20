@@ -1,7 +1,60 @@
-# Mỗi dòng là một từ/cụm từ. Dòng bắt đầu bằng # sẽ bị bỏ qua.
-# Giữ danh sách ngắn và đúng phạm vi chủ đề.
-bomb
-terror
-riot
-assault
-shooting
+tình dục
+quan hệ
+giao hợp
+ân ái
+thân mật
+khiêu dâm
+nhạy cảm
+giường chiếu
+sex
+làm tình
+quan hệ tình dục
+xxx
+phim người lớn
+phim sex
+ảnh nóng
+clip nóng
+kích dục
+ngực
+vòng một
+vòng ba
+mông
+đùi
+bộ phận sinh dục
+chỗ kín
+địt
+đụ
+chịch
+bú
+sọp
+hiếp
+sex
+sexual
+sexuality
+intimate
+adult
+erotic
+porn
+pornography
+xxx
+hardcore
+softcore
+nsfw
+explicit
+fetish
+kinky
+breast
+boobs
+butt
+ass
+genitals
+naked
+nude
+fuck
+fucking
+fucked
+blowjob
+handjob
+cum
+dick
+pussy
