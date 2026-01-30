@@ -1,0 +1,32 @@
+2026-01-21 22:35:57.632 | WARNING  | src.analysis.text_analyzer:__init__:22 - Spacy model not found. Run: python -m spacy download en_core_web_sm
+2026-01-21 22:35:57.633 | INFO     | src.storage.elasticsearch_client:__init__:34 - Connected to Elasticsearch at http://localhost:9200
+2026-01-21 22:35:57.633 | INFO     | src.storage.clickhouse_client:__init__:27 - Connected to ClickHouse at localhost:9000
+2026-01-21 22:35:57.634 | INFO     | __main__:__init__:48 - ETL Pipeline initialized
+2026-01-21 22:35:57.634 | INFO     | __main__:run:188 - ==================================================
+2026-01-21 22:35:57.634 | INFO     | __main__:run:189 - Starting ETL Pipeline
+2026-01-21 22:35:57.634 | INFO     | __main__:run:190 - ==================================================
+2026-01-21 22:35:57.634 | INFO     | __main__:setup_storage:52 - Setting up storage...
+2026-01-21 22:36:27.688 | ERROR    | __main__:run:224 - ETL Pipeline failed: Connection timed out
+2026-01-21 22:37:44.585 | WARNING  | src.analysis.text_analyzer:__init__:22 - Spacy model not found. Run: python -m spacy download en_core_web_sm
+2026-01-21 22:37:44.585 | INFO     | src.storage.elasticsearch_client:__init__:34 - Connected to Elasticsearch at http://localhost:9200
+2026-01-21 22:37:44.586 | INFO     | src.storage.clickhouse_client:__init__:27 - Connected to ClickHouse at localhost:9000
+2026-01-21 22:37:44.586 | INFO     | __main__:__init__:48 - ETL Pipeline initialized
+2026-01-21 22:37:44.586 | INFO     | __main__:run:188 - ==================================================
+2026-01-21 22:37:44.586 | INFO     | __main__:run:189 - Starting ETL Pipeline
+2026-01-21 22:37:44.586 | INFO     | __main__:run:190 - ==================================================
+2026-01-21 22:37:44.586 | INFO     | __main__:setup_storage:52 - Setting up storage...
+2026-01-21 22:37:44.599 | INFO     | src.storage.elasticsearch_client:create_indices:180 - Index already exists: social_media_posts
+2026-01-21 22:38:14.625 | INFO     | src.storage.elasticsearch_client:create_indices:178 - Created index: social_media_processed
+2026-01-21 22:40:12.247 | WARNING  | src.analysis.text_analyzer:__init__:22 - Spacy model not found. Run: python -m spacy download en_core_web_sm
+2026-01-21 22:40:12.248 | INFO     | src.storage.elasticsearch_client:__init__:34 - Connected to Elasticsearch at http://localhost:9200
+2026-01-21 22:40:12.248 | INFO     | src.storage.clickhouse_client:__init__:27 - Connected to ClickHouse at localhost:9000
+2026-01-21 22:40:12.248 | INFO     | __main__:__init__:48 - ETL Pipeline initialized
+2026-01-21 22:40:12.248 | INFO     | __main__:run:188 - ==================================================
+2026-01-21 22:40:12.248 | INFO     | __main__:run:189 - Starting ETL Pipeline
+2026-01-21 22:40:12.248 | INFO     | __main__:run:190 - ==================================================
+2026-01-21 22:40:12.249 | INFO     | __main__:setup_storage:52 - Setting up storage...
+2026-01-21 22:40:12.252 | INFO     | src.storage.elasticsearch_client:create_indices:180 - Index already exists: social_media_posts
+2026-01-21 22:40:12.254 | INFO     | src.storage.elasticsearch_client:create_indices:180 - Index already exists: social_media_processed
+2026-01-21 22:40:12.255 | INFO     | src.storage.elasticsearch_client:create_indices:180 - Index already exists: social_media_events
+2026-01-21 22:40:42.283 | INFO     | src.storage.elasticsearch_client:create_indices:178 - Created index: social_media_metrics
+2026-01-21 22:40:42.285 | ERROR    | __main__:run:224 - ETL Pipeline failed: Unexpected EOF while reading bytes

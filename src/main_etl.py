@@ -17,7 +17,7 @@ from src.analysis.text_analyzer import TextAnalyzer, EngagementCalculator
 from src.analysis.event_detector import EventDetector
 from src.storage.elasticsearch_client import ElasticsearchClient
 from src.storage.clickhouse_client import ClickHouseClient
-from filter_sensitive import load_terms, should_drop
+from src.filter_sensitive import load_terms, should_drop
 
 
 class ETLPipeline:

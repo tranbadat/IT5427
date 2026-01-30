@@ -4,6 +4,7 @@ Event detection and burst analysis module
 from typing import List, Dict, Any, Tuple
 from datetime import datetime, timedelta
 from collections import defaultdict, Counter
+from typing import Optional, List, Dict, Tuple
 
 import numpy as np
 import pandas as pd

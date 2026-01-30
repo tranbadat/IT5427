@@ -118,12 +118,12 @@ class StreamProcessor:
             sum("num_shares").alias("total_shares"),
             sum("num_comments").alias("total_comments"),
             avg("engagement_score").alias("avg_engagement"),
-            countDistinct("user_id").alias("unique_users")
+            approx_count_distinct("user_id").alias("unique_users")
         )
         
         # Write aggregated results
         query = windowed.writeStream \
-            .outputMode("update") \
+            .outputMode("append") \
             .format("parquet") \
             .option("path", output_path) \
             .option("checkpointLocation", f"{output_path}/_checkpoint") \

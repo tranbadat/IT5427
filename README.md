@@ -187,6 +187,8 @@ python -m uvicorn src.api.main:app --reload
 make run-dashboard
 # hoặc
 python src/dashboard/app.py
+python -m src.dashboard.app
+
 
 # Dashboard tại: http://localhost:8050
 ```
@@ -198,6 +200,8 @@ python src/dashboard/app.py
 make run-stream
 # hoặc
 python src/streaming/stream_processor.py
+python -m src.streaming.stream_processor
+
 ```
 
 ## 📊 Sử dụng

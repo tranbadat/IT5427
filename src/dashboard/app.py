@@ -11,7 +11,6 @@ import plotly.graph_objs as go
 import plotly.express as px
 import pandas as pd
 
-from src.config import config
 from src.storage.elasticsearch_client import ElasticsearchClient
 from src.storage.clickhouse_client import ClickHouseClient
 
