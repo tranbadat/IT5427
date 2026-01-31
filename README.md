@@ -62,3 +62,72 @@ python src\filter_sensitive.py --input data\raw --output data\processed --words 
 ## Ghi chú về ClickHouse
 
 ClickHouse đóng vai trò OLAP server để tăng tốc truy vấn cho dashboard. Có thể thiết kế bảng phân vùng theo `createDate`/`collectDate` và chỉ mục theo `source`, `categories`.
+
+
+## Huong dan streaming + kiem tra ghi ClickHouse (Ubuntu/macOS)
+
+Luu y quan trong: Spark Structured Streaming voi file source chi doc **file moi** sau khi stream da chay. Neu file da ton tai truoc do hoac da duoc checkpoint ghi nhan, Spark se bo qua.
+
+### 1) Reset checkpoint (neu can)
+```bash
+rm -rf ./checkpoints/social_burst
+```
+
+### 2) Khoi dong lai stack
+```bash
+docker compose down
+docker compose up -d --force-recreate
+```
+
+### 3) Copy file moi sau khi stream da chay
+```bash
+cp ./data/raw/twitter/tweets.csv ./data/raw/twitter/tweets_$(date +%Y%m%d%H%M%S).csv
+```
+
+### 4) Xem log
+```bash
+docker logs -f spark-runner
+docker logs -f clickhouse
+```
+
+### 5) Kiem tra ClickHouse nhanh
+```bash
+docker exec -it clickhouse clickhouse-client -u admin --password admin123
+```
+```sql
+SELECT count(*) FROM social_time_series;
+SELECT count(*) FROM social_burst_events;
+```
+
+## Huong dan streaming + kiem tra ghi ClickHouse (Windows PowerShell)
+
+### 1) Reset checkpoint (neu can)
+```powershell
+Remove-Item -Recurse -Force .\checkpoints\social_burst
+```
+
+### 2) Khoi dong lai stack
+```powershell
+docker compose down
+docker compose up -d --force-recreate
+```
+
+### 3) Copy file moi sau khi stream da chay
+```powershell
+Copy-Item .\data\raw\twitter\tweets.csv .\data\raw\twitter\tweets_$(Get-Date -Format yyyyMMddHHmmss).csv
+```
+
+### 4) Xem log
+```powershell
+docker logs -f spark-runner
+docker logs -f clickhouse
+```
+
+### 5) Kiem tra ClickHouse nhanh
+```powershell
+docker exec -it clickhouse clickhouse-client -u admin --password admin123
+```
+```sql
+SELECT count(*) FROM social_time_series;
+SELECT count(*) FROM social_burst_events;
+```

@@ -1,0 +1,171 @@
+{
+  "info": {
+    "name": "Social Analytics API",
+    "description": "Postman collection for Social Analytics API (FastAPI + ClickHouse).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Time Series",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/time-series?source=twitter&start=2026-01-31T00:00:00&end=2026-01-31T23:59:59&limit=200&order=asc",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "time-series"
+          ],
+          "query": [
+            {
+              "key": "source",
+              "value": "twitter"
+            },
+            {
+              "key": "start",
+              "value": "2026-01-31T00:00:00"
+            },
+            {
+              "key": "end",
+              "value": "2026-01-31T23:59:59"
+            },
+            {
+              "key": "limit",
+              "value": "200"
+            },
+            {
+              "key": "order",
+              "value": "asc"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Burst Events",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/burst-events?source=reddit&category=politics&is_burst=true&min_score=2.5&limit=100",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "burst-events"
+          ],
+          "query": [
+            {
+              "key": "source",
+              "value": "reddit"
+            },
+            {
+              "key": "category",
+              "value": "politics"
+            },
+            {
+              "key": "is_burst",
+              "value": "true"
+            },
+            {
+              "key": "min_score",
+              "value": "2.5"
+            },
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daily Summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/daily-summary?date_from=2026-01-01&date_to=2026-01-31&limit=100",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "daily-summary"
+          ],
+          "query": [
+            {
+              "key": "date_from",
+              "value": "2026-01-01"
+            },
+            {
+              "key": "date_to",
+              "value": "2026-01-31"
+            },
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Top Bursts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/top-bursts?day=2026-01-31&source=reddit&category=politics&limit=50",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "top-bursts"
+          ],
+          "query": [
+            {
+              "key": "day",
+              "value": "2026-01-31"
+            },
+            {
+              "key": "source",
+              "value": "reddit"
+            },
+            {
+              "key": "category",
+              "value": "politics"
+            },
+            {
+              "key": "limit",
+              "value": "50"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
